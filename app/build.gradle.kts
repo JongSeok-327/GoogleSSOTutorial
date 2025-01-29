@@ -2,14 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.bae.googlessotutorial"
+    namespace = "com.bae.sso"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.bae.googlessotutorial"
+        applicationId = "com.bae.sso"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
@@ -46,6 +48,19 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Credential Manager(google login)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.google.id)
+
+    // Navigation
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    // Coil
+    implementation(libs.coil.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

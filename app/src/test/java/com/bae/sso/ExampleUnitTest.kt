@@ -1,4 +1,4 @@
-package com.bae.googlessotutorial
+package com.bae.sso
 
 import org.junit.Test
 

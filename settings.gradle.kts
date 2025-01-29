@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GoogleSSOTutorial"
+rootProject.name = "SSO"
 include(":app")
  

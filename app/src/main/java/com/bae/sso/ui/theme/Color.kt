@@ -1,4 +1,4 @@
-package com.bae.googlessotutorial.ui.theme
+package com.bae.sso.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
