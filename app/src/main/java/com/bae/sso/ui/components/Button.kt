@@ -38,8 +38,14 @@ fun GoogleSignInButton(
     @ColorRes strokeColor: Int = R.color.white,
     @ColorRes buttonColor: Int = R.color.white,
     @ColorRes textColor: Int = R.color.black,
+    type: Int = 0,
     onClick: () -> Unit
 ) {
+    val buttonType = if (type == 0) {
+        "SignInWithGoogleOption"
+    } else {
+        "GoogleIdOption"
+    }
     Button(
         onClick = onClick,
         modifier = modifier.fillMaxWidth(),
@@ -61,7 +67,7 @@ fun GoogleSignInButton(
             )
             Spacer(modifier = Modifier.width(10.dp))
             Text(
-                text = "Sign in with Google",
+                text = "Sign in with Google $buttonType",
                 style = TextStyle(
                     color = colorResource(textColor),
                     fontWeight = FontWeight.W500,

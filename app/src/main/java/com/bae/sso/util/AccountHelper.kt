@@ -92,6 +92,8 @@ class AccountHelper(
     * setAutoSelectEnabled
         - true: If there is only one account available, automatically select that account without the Select Account screen.
         - false: Always display the account selection screen.
+
+    * setNonce(資料参考）
     */
     suspend fun googleOneTapSignOn(): GoogleSingleSignOnResult {
         return try {
@@ -99,7 +101,8 @@ class AccountHelper(
             val googleIdOption = GetGoogleIdOption.Builder()
                 .setServerClientId("542748531980-b0mj0mgahs60mdjp474cskb0nqp9nei1.apps.googleusercontent.com")
                 .setFilterByAuthorizedAccounts(false)
-                .setAutoSelectEnabled(false)
+                .setAutoSelectEnabled(true)
+                .setNonce("")
                 .build()
 
             val response = credentialManager.getCredential(

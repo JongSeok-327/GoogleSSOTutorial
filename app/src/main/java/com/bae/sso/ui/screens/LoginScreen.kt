@@ -111,7 +111,8 @@ private fun LoginScreenContent(
             buttonColor = R.color.black,
             textColor = R.color.gray_text,
             strokeColor = R.color.gray_stroke,
-            onClick = signInOnClick
+            onClick = signInOnClick,
+            type = 0
         )
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -120,7 +121,8 @@ private fun LoginScreenContent(
             buttonColor = R.color.purple_500,
             textColor = R.color.gray_text,
             strokeColor = R.color.gray_stroke,
-            onClick = signInOneTapOnClick
+            onClick = signInOneTapOnClick,
+            type = 1
         )
 
         Spacer(modifier = Modifier.height(10.dp))
